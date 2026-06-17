@@ -1,0 +1,14 @@
+{
+  "name": "swiftie-ranking",
+  "version": "1.0.0",
+  "description": "Landing para votar por las mejores canciones de Taylor Swift y crear un ranking mundial basado en el gusto de los fans.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
