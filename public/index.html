@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiftie Ranking · Vota las mejores canciones de Taylor Swift</title>
+  <meta name="description" content="Vota por tus canciones favoritas de Taylor Swift y ayuda a construir el ranking mundial decidido por los fans." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">✨ El ranking lo deciden los fans ✨</p>
+      <h1 class="hero__title">Las mejores canciones de<br /><span>Taylor Swift</span></h1>
+      <p class="hero__subtitle">
+        Vota por las canciones que más amas y construyamos juntos el
+        <strong>ranking mundial</strong> basado en el gusto de los Swifties.
+      </p>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num" id="totalVotes">—</span>
+          <span class="stat__label">votos totales</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" id="totalSongs">—</span>
+          <span class="stat__label">canciones</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" id="myVotes">0</span>
+          <span class="stat__label">tus votos</span>
+        </div>
+      </div>
+      <a href="#ranking" class="hero__cta">Empezar a votar ↓</a>
+    </div>
+  </header>
+
+  <main id="ranking" class="board">
+    <div class="board__head">
+      <h2>Ranking mundial</h2>
+      <div class="board__controls">
+        <button class="sort-btn is-active" data-sort="rank">🏆 Por ranking</button>
+        <button class="sort-btn" data-sort="album">💿 Por era</button>
+      </div>
+    </div>
+
+    <p class="board__hint">Toca <strong>Votar</strong> en tus favoritas. El ranking se actualiza al instante.</p>
+
+    <ul id="songList" class="song-list" aria-live="polite">
+      <li class="loading">Cargando el ranking…</li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>Hecho con 💜 por y para Swifties. Los votos son anónimos y comunitarios.</p>
+    <p class="footer__small">Proyecto fan, sin afiliación oficial con Taylor Swift o sus sellos.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
